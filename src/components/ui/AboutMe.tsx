@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap, Award } from "lucide-react";
 
-export default function AboutMe() {
+export default function AboutMe({ id }: { id: string }) {
   const timeline = [
     {
       type: "work",
@@ -53,7 +53,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id={id} className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
         {/* ABOUT ME SECTION */}
         <motion.div

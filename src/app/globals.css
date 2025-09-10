@@ -10106,8 +10106,9 @@ html.w-mod-js [data-ix="initial-display-none-transparent"] {
 
   .selfie {
     top: auto;
+    width: 50rem;
     bottom: 0;
-    left: -8px;
+    left: -12rem;
     right: auto;
   }
 

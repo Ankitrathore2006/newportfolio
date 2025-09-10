@@ -28,7 +28,7 @@ const initialValues = {
 
 type ContactFormData = Z.infer<typeof contactFormSchema>;
 
-export default function Contact() {
+export default function Contact({ id }: { id: string }) {
 
   const [loading, setLoading] = useState(false);
 
@@ -75,7 +75,7 @@ export default function Contact() {
 
   return (
     <section
-      id="contact"
+      id={id}
       className="py-20 min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900"
     >
       <Toaster />

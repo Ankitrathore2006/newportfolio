@@ -82,7 +82,7 @@ export default function AboutMe({ id }: { id: string }) {
 
         {/* TIMELINE */}
         <div className="relative">
-          <div className="absolute  left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-[#ff4c75] to-[#fef4fe] h-full rounded-full"></div>
+          <div className="absolute left-2 md:left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-[#ff4c75] to-[#fef4fe] h-full rounded-full"></div>
 
           {timeline.map((item, index) => (
             <motion.div
@@ -97,7 +97,7 @@ export default function AboutMe({ id }: { id: string }) {
             >
               <div className="w-full md:w-1/2 relative">
                 {/* ICON */}
-                <div className="absolute -left-7 mx-13 top-4 md:-left-14 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#430f44] to-[#ff4c75] text-white shadow-lg ring-4 ring-white dark:ring-gray-900">
+                <div className="absolute -left-10 mx-13 top-4 md:-left-14 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#430f44] to-[#ff4c75] text-white shadow-lg ring-4 ring-white dark:ring-gray-900">
                   {item.type === "work" ? (
                     <Briefcase size={22} />
                   ) : item.type === "education" ? (
@@ -108,7 +108,7 @@ export default function AboutMe({ id }: { id: string }) {
                 </div>
 
                 {/* CARD */}
-                <div className="bg-white mx-5 dark:bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition duration-300">
+                <div className="bg-white mx-9 md:mx-5 dark:bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition duration-300">
                   <h3 className="text-[15px] ml-3 my-0 font-semibold text-[rgba(67,15,68,0.8)]">
                     {item.title}
                   </h3>

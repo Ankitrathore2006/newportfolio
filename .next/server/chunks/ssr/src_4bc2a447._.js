@@ -1972,7 +1972,7 @@ function AboutMe({ id }) {
                     className: "relative",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute  left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-[#ff4c75] to-[#fef4fe] h-full rounded-full"
+                            className: "absolute left-2 md:left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-[#ff4c75] to-[#fef4fe] h-full rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/components/ui/AboutMe.tsx",
                             lineNumber: 85,
@@ -2000,7 +2000,7 @@ function AboutMe({ id }) {
                                     className: "w-full md:w-1/2 relative",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "absolute -left-7 mx-13 top-4 md:-left-14 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#430f44] to-[#ff4c75] text-white shadow-lg ring-4 ring-white dark:ring-gray-900",
+                                            className: "absolute -left-10 mx-13 top-4 md:-left-14 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#430f44] to-[#ff4c75] text-white shadow-lg ring-4 ring-white dark:ring-gray-900",
                                             children: item.type === "work" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$briefcase$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Briefcase$3e$__["Briefcase"], {
                                                 size: 22
                                             }, void 0, false, {
@@ -2026,7 +2026,7 @@ function AboutMe({ id }) {
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "bg-white mx-5 dark:bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition duration-300",
+                                            className: "bg-white mx-9 md:mx-5 dark:bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.01] transition duration-300",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                     className: "text-[15px] ml-3 my-0 font-semibold text-[rgba(67,15,68,0.8)]",

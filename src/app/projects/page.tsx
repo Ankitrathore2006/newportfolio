@@ -11,69 +11,11 @@ import * as Z from "zod";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import ContactForm from "@/components/ui/ContactForm";
 
 
-const contactFormSchema = Z.object({
-  name: Z.string().nonempty("Name is required"),
-  email: Z.string().email("Invalid email").nonempty("Email is required"),
-  subject: Z.string().nonempty("Subject is required"),
-  message: Z.string().nonempty("Message is required"),
-});
-
-const initialValues = {
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-};
-
-type ContactFormData = Z.infer<typeof contactFormSchema>;
 
 function Page() {
-
-    
-  const [loading, setLoading] = useState(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<ContactFormData>({
-    defaultValues: initialValues,
-    resolver: zodResolver(contactFormSchema),
-  });
-
-  // ✅ Submit Handler with EmailJS
-  const onSubmit = async (data: ContactFormData) => {
-    
-    setLoading(true);
-    try {
-      const payload = {
-        name: data.name,
-        to_name: "Full Stack Developer",
-        message: data.message,
-        email: data.email,
-        title: data.subject,
-      };
-
-      const serviceID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!;
-      const templateID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!;
-      const publicKey = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!;
-
-      await emailjs.send(serviceID, templateID, payload, publicKey);
-
-
-
-      toast.success("Thank you! Your submission has been received!");
-      reset(initialValues);
-    } catch (error) {
-      toast.error("Failed to send message, please try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
-
 
 
   return (
@@ -82,7 +24,13 @@ function Page() {
       <header id="Header" className="navbar w-nav">
         <div className="navbar w-container">
           <a href="/" className="brand w-nav-brand" aria-label="home">
-            <h1 className="logo">Ankit Rathore</h1>
+            {/* <h1 className="logo">Ankit Rathore</h1> */}
+            <img
+              src="/2-removebg-preview.png"
+              alt=""
+              style={{ width: "6rem" }}
+            />
+
           </a>
           <nav role="navigation" className="nav-menu w-nav-menu">
             <a
@@ -92,9 +40,9 @@ function Page() {
             >
               Home
             </a>
-            <a href="/resume" className="nav-link onwhite w-nav-link">
+            {/* <a href="/resume" className="nav-link onwhite w-nav-link">
               Resume
-            </a>
+            </a> */}
             <a href="#Footer" className="nav-link cta onwhite w-nav-link">
               Get In Touch
             </a>
@@ -111,8 +59,8 @@ function Page() {
       {/* Projects Section */}
       <section className="case-study-section">
         <div className="title w-container">
-          <h1 className="h1-case-study">Showcase</h1>
-          <h2 className="h2-case-study">2+ years of handcrafted design</h2>
+          <h1 className="h1-case-study">Showcase of My Work</h1>
+          <h2 className="h2-case-study">2+ Years of Experience in Design Reliable Applications</h2>
           <h4 className="h3 dark">
             UX/UI Design, Development, Branding, and more...
           </h4>
@@ -121,6 +69,7 @@ function Page() {
         <div className="title removed-padding w-container">
           <div role="list" className="showcases w-dyn-items">
             {projects.map((proj, index) => (
+              
               <motion.div
                 key={proj.slug}
                 role="listitem"
@@ -143,8 +92,8 @@ function Page() {
                       src={proj.image}
                       loading="lazy"
                       alt={proj.title}
-                      className="image-20 !h-[210px]"
-                      style={{ height: "210px" }}
+                      className="image-20"
+                      style={{ height: "210px", width: "100%"  }}
                     />
                   </div>
                   <div className="div-block-25">
@@ -171,51 +120,7 @@ function Page() {
             </div>
 
             {/* Contact Form */}
-            <div className="form-block-charcoal dark-mode w-form">
-              <form onSubmit={handleSubmit(onSubmit)} id="email-form" name="email-form" className="form">
-                <div className="form-fields">
-                  <input
-                    className="form-field dark-mode w-input"
-                     {...register("name")}
-                    placeholder="Name"
-                    type="text"
-                    required
-                  />
-                  <input
-                    className="form-field dark-mode w-input"
-                    {...register("email")}
-                    placeholder="Email"
-                    type="email"
-                    required
-                  />
-                  <input
-                    className="form-field dark-mode w-input"
-                   {...register("subject")}
-                     placeholder="What’s this about?"
-                    type="text"
-                    required
-                  />
-                  <input
-                    className="form-field dark-mode hcih w-input"
-                    {...register("message")}  
-                    placeholder="How Can I Help?"
-                    type="text"
-                    required
-                  />
-                </div>
-                <button type="submit" className="submit-button dark w-button">
-                  Submit
-                </button>
-              </form>
-             
-              <div className="error-message w-form-fail">
-                <div className="text-block-3">
-                  {errors.subject && (
-                    <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
-                  )}
-                </div>
-              </div>
-            </div>
+           <ContactForm />
           </div>
 
           {/* Sword Animation */}
@@ -309,7 +214,7 @@ function Page() {
             </div>
           </div>
           <div className="back-to-top">
-            <a href="#Header" className="link white submit-button">
+            <a href="#Header" className="link white submit-button" style={{ zIndex: "10"}}>
               back to top ^
             </a>
           </div>

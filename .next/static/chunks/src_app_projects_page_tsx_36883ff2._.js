@@ -5,7 +5,7 @@
   "static/chunks/node_modules_framer-motion_dist_es_b71551f1._.js",
   "static/chunks/node_modules_zod_v4_df0fe25e._.js",
   "static/chunks/node_modules_98488f7e._.js",
-  "static/chunks/src_213241b5._.js",
+  "static/chunks/src_eb63e10d._.js",
   "static/chunks/src_app_projects_project_633b11c8.css"
 ],
     source: "dynamic"

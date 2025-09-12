@@ -112,7 +112,7 @@ export default function Contact({ id }: { id: string }) {
               <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                 Name
               </label>
-              <input
+              <input required
                 {...register("name")}
                 type="text"
                 placeholder="Your full name"
@@ -128,7 +128,7 @@ export default function Contact({ id }: { id: string }) {
               <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                 Email
               </label>
-              <input
+              <input required
                 {...register("email")}
                 type="email"
                 placeholder="Your email address"
@@ -145,7 +145,7 @@ export default function Contact({ id }: { id: string }) {
             <label className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
               Subject
             </label>
-            <input
+            <input required
               {...register("subject")}
               type="text"
               placeholder="What’s this about?"
@@ -162,6 +162,7 @@ export default function Contact({ id }: { id: string }) {
               Message
             </label>
             <textarea
+              required
               {...register("message")}
               rows={5}
               placeholder="Write your message..."

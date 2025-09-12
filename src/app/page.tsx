@@ -524,6 +524,7 @@ useEffect(() => {
       {/* Contact Section */}
       <Contact id="contact" />
 
+
       {/* footer */}
       <Footer />
     </>

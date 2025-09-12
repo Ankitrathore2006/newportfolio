@@ -1,8 +1,8 @@
 // data/projectsData.ts
 export const projects = [
   {
-    slug: "library-management-system",
-    title: "Library Management System",
+    slug: "Automation-library-management",
+    title: "Automation System for Library Management",
     description:
       "A web-based system built with PHP, MySQL, and JavaScript for managing books, members, and issuing/returning operations. Currently deployed at the institute.",
     image: "/images/library.png",

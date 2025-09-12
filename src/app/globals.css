@@ -5836,7 +5836,7 @@ figure {
 .block-overlay {
     z-index: 60;
     background-color: #ff6348;
-    min-height: 60px;
+    min-height: 45px;
     width: 38px;
     position: absolute;
     border-radius: 5px;
@@ -5856,7 +5856,7 @@ figure {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -15rem;
+  left: -11rem;
   right: 0;
   /* opacity: .8; */
 }
@@ -9102,7 +9102,7 @@ html.w-mod-js [data-ix="initial-display-none-transparent"] {
   }
 
   .block-overlay {
-    max-height: 60px;
+    max-height: 45px;
   }
 
   .external-link {

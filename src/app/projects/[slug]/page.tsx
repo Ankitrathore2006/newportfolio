@@ -82,7 +82,13 @@ function Page() {
       <header id="Header" className="navbar w-nav">
         <div className="navbar w-container">
           <a href="/" className="brand w-nav-brand" aria-label="home">
-            <h1 className="logo">Ankit Rathore</h1>
+            {/* <h1 className="logo">Ankit Rathore</h1> */}
+             <img
+              src="/2-removebg-preview.png"
+              alt=""
+              style={{ width: "6rem" }}
+            />
+
           </a>
           <nav role="navigation" className="nav-menu w-nav-menu">
             <a

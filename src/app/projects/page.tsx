@@ -24,12 +24,12 @@ function Page() {
       <header id="Header" className="navbar w-nav">
         <div className="navbar w-container">
           <a href="/" className="brand w-nav-brand" aria-label="home">
-            {/* <h1 className="logo">Ankit Rathore</h1> */}
-            <img
+            <h1 className="logo">ankitr.codes</h1>
+            {/* <img
               src="/2-removebg-preview.png"
               alt=""
               style={{ width: "6rem" }}
-            />
+            /> */}
 
           </a>
           <nav role="navigation" className="nav-menu w-nav-menu">
@@ -80,25 +80,24 @@ function Page() {
                 viewport={{ once: true }}
               >
                 <a
-                  // href={`/projects/${proj.slug}`}
-                  href={proj.link}
+                  href={`/projects/${proj.slug}`}
                   className="link-block w-inline-block"
                 >
                   <div
                     className="div-block-24"
-                    style={{ height: "210px", overflow: "hidden" }}
+                    style={{ height: "170px", overflow: "hidden" }}
                   >
                     <img
                       src={proj.image}
                       loading="lazy"
                       alt={proj.title}
                       className="image-20"
-                      style={{ height: "210px", width: "100%"  }}
+                      style={{ width: "100%" }}
                     />
                   </div>
                   <div className="div-block-25">
                     <h4>{proj.title}</h4>
-                    <p>{proj.description}</p>
+                    <p>{proj.shortDescription}</p>
                   </div>
                 </a>
               </motion.div>

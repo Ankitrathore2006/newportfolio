@@ -752,6 +752,10 @@
     margin: calc(var(--spacing) * 0);
   }
 
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
+
   .mx-9 {
     margin-inline: calc(var(--spacing) * 9);
   }

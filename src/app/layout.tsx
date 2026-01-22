@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Portfolio | Ankit Rathore",
   description: "Welcome to Ankit Rathore's portfolio website. Here you'll find my latest projects and skills.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/fav.png",
   },
 };
 

@@ -74,7 +74,7 @@ const metadata = {
     title: "Portfolio | Ankit Rathore",
     description: "Welcome to Ankit Rathore's portfolio website. Here you'll find my latest projects and skills.",
     icons: {
-        icon: "/favicon.png"
+        icon: "/fav.png"
     }
 };
 function RootLayout({ children }) {

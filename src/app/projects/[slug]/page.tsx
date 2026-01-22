@@ -214,7 +214,6 @@ function Page({ params }: PageProps) {
             >
               <div
                 className="img case-study-cover mt-8 mb-8"
-                style={{ width: "100%", height: "585px", overflow: "hidden" }}
               >
                 <img
                   src={project.image}

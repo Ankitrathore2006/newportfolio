@@ -3683,8 +3683,11 @@ a {
 }
 
 .case-study-cover {
+  cursor: pointer;
   width: 100%;
+  height: 600px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .titlecase {
@@ -5949,6 +5952,10 @@ a {
 
   #w-node-d243a26d-05fb-cb1d-0964-dffd2249e3d3-d33bf12d, #w-node-aa1c3737-588b-4397-12ad-3ceef4f936bf-d33bf12d, #w-node-_32aa7322-7f17-4145-077c-90ebfd35d5c1-d33bf12d {
     grid-area: span 2 / span 1 / span 2 / span 1;
+  }
+
+  .case-study-cover {
+    height: 250px;
   }
 }
 

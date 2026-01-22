@@ -6,11 +6,10 @@ import Hero from "@/components/ui/Hero";
 import Footer from "@/components/ui/Footer";
 import TextScroll from "@/components/ui/TextScroll";
 import { Briefcase, House, Info, Menu, Phone } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import Contact from "@/components/ui/Contact";
 import AboutMe from "@/components/ui/AboutMe";
 import "./globals.css";
-import path from "path/win32";
 
 function useTiltToMouse() {
   useEffect(() => {
@@ -30,16 +29,16 @@ function useTiltToMouse() {
       let clientY = centerY;
 
       const X_SENSITIVITY = parseFloat(
-        trigger.getAttribute("data-tilt-to-mouse-x-sensitivity") || "1"
+        trigger.getAttribute("data-tilt-to-mouse-x-sensitivity") || "1",
       );
       const Y_SENSITIVITY = parseFloat(
-        trigger.getAttribute("data-tilt-to-mouse-y-sensitivity") || "1.6"
+        trigger.getAttribute("data-tilt-to-mouse-y-sensitivity") || "1.6",
       );
       const X_OFFSET = parseFloat(
-        trigger.getAttribute("data-tilt-to-mouse-x-offset") || "0"
+        trigger.getAttribute("data-tilt-to-mouse-x-offset") || "0",
       );
       const Y_OFFSET = parseFloat(
-        trigger.getAttribute("data-tilt-to-mouse-y-offset") || "0"
+        trigger.getAttribute("data-tilt-to-mouse-y-offset") || "0",
       );
 
       const handleOrientation = (event: DeviceOrientationEvent) => {
@@ -58,7 +57,7 @@ function useTiltToMouse() {
             clientX,
             clientY,
             view: window,
-          })
+          }),
         );
       };
 
@@ -84,40 +83,41 @@ function Page() {
 
   const [activeSection, setActiveSection] = useState<string>("home");
 
-useEffect(() => {
-  const sections = document.querySelectorAll("section");
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      let mostVisibleSection: { id: string; ratio: number } = {
-        id: activeSection,
-        ratio: 0,
-      };
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let mostVisibleSection: { id: string; ratio: number } = {
+          id: activeSection,
+          ratio: 0,
+        };
 
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > mostVisibleSection.ratio) {
-          mostVisibleSection = {
-            id: entry.target.id,
-            ratio: entry.intersectionRatio,
-          };
+        entries.forEach((entry) => {
+          if (
+            entry.isIntersecting &&
+            entry.intersectionRatio > mostVisibleSection.ratio
+          ) {
+            mostVisibleSection = {
+              id: entry.target.id,
+              ratio: entry.intersectionRatio,
+            };
+          }
+        });
+
+        if (mostVisibleSection.id !== activeSection) {
+          setActiveSection(mostVisibleSection.id);
         }
-      });
+      },
+      {
+        threshold: Array.from({ length: 11 }, (_, i) => i / 10), // 0.0 → 1.0
+      },
+    );
 
-      if (mostVisibleSection.id !== activeSection) {
-        setActiveSection(mostVisibleSection.id);
-      }
-    },
-    {
-      threshold: Array.from({ length: 11 }, (_, i) => i / 10), // 0.0 → 1.0
-    }
-  );
+    sections.forEach((sec) => observer.observe(sec));
 
-  sections.forEach((sec) => observer.observe(sec));
-
-  return () => observer.disconnect();
-}, [activeSection]);
-
-
+    return () => observer.disconnect();
+  }, [activeSection]);
 
   // Scroll effect
   useEffect(() => {
@@ -129,7 +129,7 @@ useEffect(() => {
       const windowHeight = window.innerHeight;
       const scrollProgress = Math.min(
         Math.max((windowHeight - rect.top) / rect.height, 0),
-        1
+        1,
       );
 
       // Update overlay height (shrink gradually)
@@ -144,11 +144,11 @@ useEffect(() => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
 
   return (
     <>
       <section id="home" ref={sectionRef} className="">
+       
         {/* Navigation */}
         {/* Navigation */}
         <div>
@@ -162,9 +162,9 @@ useEffect(() => {
             }}
           >
             <img
-              src="/2-removebg-preview.png"
+              src="/l2.png"
               alt=""
-              className={`logo-img ${
+              className={`bright-element logo-img ${
                 shrinkSidebar ? "!w-100%" : ""
               } w-hidden-tiny`}
             />
@@ -209,7 +209,11 @@ useEffect(() => {
                 <motion.div
                   className="block-overlay w-hidden-tiny"
                   animate={{ height: overlayHeight }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 20,
+                  }}
                 />
 
                 {/* Nav Links */}
@@ -380,9 +384,10 @@ useEffect(() => {
               className="p-2 w-[6rem] h-[5rem] bg-[#ff6348] flex items-center justify-center overflow-hidden"
             >
               <img
-                src="/2-removebg-preview.png"
+                src="/l2.png"
                 alt="logo"
-                className="max-w-full max-h-full object-contain"
+                className="max-w-full max-h-full object-contain bright-element"
+               
               />
             </button>
           </div>
@@ -515,7 +520,7 @@ useEffect(() => {
         <TextScroll />
 
         {/* Content */}
-        <Content  />
+        <Content />
       </section>
 
       {/* About Me Section */}
@@ -523,7 +528,6 @@ useEffect(() => {
 
       {/* Contact Section */}
       <Contact id="contact" />
-
 
       {/* footer */}
       <Footer />

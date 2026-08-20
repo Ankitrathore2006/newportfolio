@@ -10,6 +10,7 @@ import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
 import Contact from "@/components/ui/Contact";
 import AboutMe from "@/components/ui/AboutMe";
 import "./globals.css";
+import WorkContent from "@/components/ui/WorkContent";
 
 function useTiltToMouse() {
   useEffect(() => {
@@ -162,9 +163,9 @@ function Page() {
             }}
           >
             <img
-              src="/l2.png"
+              src="/logo/ld.png"
               alt=""
-              className={`bright-element logo-img ${
+              className={`logo-img ${
                 shrinkSidebar ? "!w-100%" : ""
               } w-hidden-tiny`}
             />
@@ -237,7 +238,7 @@ function Page() {
                       <a
                         href="/projects"
                         className={`side-nav-link w-nav-link ${
-                          activeSection === "project" ? "w--current" : ""
+                          activeSection === "work" ? "w--current" : ""
                         }`}
                         title="My Works"
                       >
@@ -275,7 +276,7 @@ function Page() {
                       <a
                         href="/projects"
                         className={`side-nav-link w-nav-link ${
-                          activeSection === "projects" ? "w--current" : ""
+                          activeSection === "work" ? "w--current" : ""
                         }`}
                       >
                         My works
@@ -384,9 +385,9 @@ function Page() {
               className="p-2 w-[6rem] h-[5rem] bg-[#ff6348] flex items-center justify-center overflow-hidden"
             >
               <img
-                src="/l2.png"
+                src="/logo/1.png"
                 alt="logo"
-                className="max-w-full max-h-full object-contain bright-element"
+                className="max-w-full max-h-full object-contain "
                
               />
             </button>
@@ -522,6 +523,9 @@ function Page() {
         {/* Content */}
         <Content />
       </section>
+
+      {/* Work Me Section */}
+      <WorkContent id="work" />
 
       {/* About Me Section */}
       <AboutMe id="about" />

@@ -9,7 +9,7 @@ export default function TextScroll() {
     target: targetRef,
   });
 
-  const text = ["W", "E", "L", "C", "O", "M", "E","😁"];
+  const text = ["W", "Ee", "L", "C", "O", "M", "E","ar"];
   const centerIndex = Math.floor(text.length / 2); // define centerIndex
 
   return (

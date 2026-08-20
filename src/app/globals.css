@@ -6480,6 +6480,8 @@ figure {
 
 .figure-right {
   float: right;
+  margin-bottom: 20px;
+  margin-right: 20px;
   position: relative;
 }
 
@@ -9233,7 +9235,7 @@ html.w-mod-js [data-ix="initial-display-none-transparent"] {
   }
 
   .figure-left {
-    max-width: 100%;
+    max-width: 90%;
   }
 
   .figure-right {
@@ -10206,7 +10208,8 @@ html.w-mod-js [data-ix="initial-display-none-transparent"] {
   }
 
   .figure-right {
-    width: 100%;
+    width: 90%;
+
   }
 
   .navigation-wrap-mobile {

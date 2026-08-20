@@ -35,15 +35,21 @@ const CharacterV1 = ({
   );
 
   return (
-    <motion.span
-      className={cn("inline-block mr-2.5 fredericka text-orange-500", isSpace && "w-4")}
-      style={{
-        x,
-        rotateX,
-      }}
-    >
-      {char}
-    </motion.span>
+    // <motion.span
+    //   className={cn("inline-block mr-2.5 fredericka text-orange-500", isSpace && "w-4")}
+    //   style={{
+    //     x,
+    //     rotateX,
+    //   }}
+    // >
+    //   {char}
+    // </motion.span>
+  <motion.img 
+    className={cn("inline-block mr-2.5 fredericka text-orange-500", isSpace && "w-4")} 
+    style={{ x, rotateX, width: "9%" }} 
+    src={`${char}.png`} 
+  />
+
   );
 };
 const CharacterV2 = ({

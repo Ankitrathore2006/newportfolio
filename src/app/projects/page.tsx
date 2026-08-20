@@ -60,7 +60,7 @@ function Page() {
       <section className="case-study-section">
         <div className="title w-container">
           <h1 className="h1-case-study">Showcase of My Work</h1>
-          <h2 className="h2-case-study">2+ Years of Experience in Design Reliable Applications</h2>
+          <h2 className="h2-case-study">4+ Years of Experience in Design Reliable Applications</h2>
           <h4 className="h3 dark">
             UX/UI Design, Development, Branding, and more...
           </h4>

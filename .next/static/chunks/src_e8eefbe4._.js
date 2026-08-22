@@ -403,6 +403,55 @@ const projects = [
         image: "/images/flight-compare.webp",
         github: "https://github.com/Ankitrathore2006/",
         liveLink: "https://flight-comparign-frontend.vercel.app/"
+    },
+    {
+        slug: "financial-forecast-explanation",
+        title: "Explainable AI: Financial Forecast & Intelligence Engine",
+        shortDescription: "An institutional-grade financial intelligence platform that combines machine learning, market data, news sentiment, and LLMs to forecast stock trends and explain predictions.",
+        introduction: "This platform provides data-driven stock forecasts with transparent, AI-generated explanations. It combines Random Forest machine learning, technical indicators, financial fundamentals, news sentiment, and Gemini/OpenRouter LLMs to transform complex market data into clear and actionable intelligence.",
+        keyInsights: [
+            "Explainable AI-powered stock forecasting",
+            "Random Forest trend prediction with backtesting",
+            "LLM-generated financial explanations",
+            "Natural-language stock and timeframe detection",
+            "Multi-API redundancy with graceful fallbacks",
+            "Premium glassmorphic financial dashboard"
+        ],
+        technologies: [
+            "React",
+            "Vite",
+            "Python",
+            "FastAPI",
+            "Random Forest",
+            "Google Gemini",
+            "OpenRouter",
+            "Yahoo Finance",
+            "NewsData.io",
+            "Chart.js"
+        ],
+        features: [
+            "Stock Data & Fundamental Analysis",
+            "Technical Indicators: RSI, MACD & Moving Averages",
+            "Random Forest Trend Prediction",
+            "AI-Generated Financial Explanations",
+            "Natural-Language Financial Queries",
+            "News Sentiment Analysis",
+            "Interactive Charts & Visualizations",
+            "Persistent Watchlist & Search History",
+            "Walk-Forward Backtesting",
+            "Graceful AI API Fallbacks"
+        ],
+        futureScope: [
+            "Real-time market alerts and notifications",
+            "Portfolio-level forecasting and risk analysis",
+            "Additional financial data providers",
+            "Advanced deep-learning forecasting models",
+            "Personalized investment dashboards",
+            "Mobile application"
+        ],
+        image: "/work-photo/finance.png",
+        github: "https://github.com/Ankitrathore2006/Financial-Forecast-Explanation-Tool",
+        liveLink: ""
     }
 ];
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {

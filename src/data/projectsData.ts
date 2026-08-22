@@ -1,6 +1,4 @@
 export const projects = [
-  
-
   {
     slug: "online-course-education-platform",
     title: "Online Course & Education Platform",
@@ -18,17 +16,9 @@ export const projects = [
 
     technologies: ["React", "Node.js", "MongoDB"],
 
-    features: [
-      "Course Management",
-      "Video Lectures",
-      "Student Dashboard",
-    ],
+    features: ["Course Management", "Video Lectures", "Student Dashboard"],
 
-    futureScope: [
-      "Live classes",
-      "Certification system",
-      "Mobile app",
-    ],
+    futureScope: ["Live classes", "Certification system", "Mobile app"],
 
     image: "/work-photo/Desktop - 6.png",
     github: "https://github.com/Ankitrathore2006/",
@@ -52,24 +42,16 @@ export const projects = [
 
     technologies: ["React", "Node.js", "TailwindCSS"],
 
-    features: [
-      "Product Listings",
-      "Cart System",
-      "Admin Controls",
-    ],
+    features: ["Product Listings", "Cart System", "Admin Controls"],
 
-    futureScope: [
-      "Payment gateway",
-      "Order tracking",
-      "Mobile app",
-    ],
+    futureScope: ["Payment gateway", "Order tracking", "Mobile app"],
 
     image: "/work-photo/FULL STACK WEB DEVELOPER.png",
     github: "https://github.com/Ankitrathore2006/",
     liveLink: "",
   },
 
-    {
+  {
     slug: "alumni-mentorship-platform",
     title: "Alumni Mentorship & Career Bridge",
     shortDescription:
@@ -86,11 +68,7 @@ export const projects = [
 
     technologies: ["React", "Node.js", "MongoDB"],
 
-    features: [
-      "Mentorship Matching",
-      "Chat System",
-      "Profile Management",
-    ],
+    features: ["Mentorship Matching", "Chat System", "Profile Management"],
 
     futureScope: [
       "Video mentoring",
@@ -120,11 +98,7 @@ export const projects = [
 
     technologies: ["Node.js", "Express", "AI APIs"],
 
-    features: [
-      "Request Monitoring",
-      "Response Filtering",
-      "API Logging",
-    ],
+    features: ["Request Monitoring", "Response Filtering", "API Logging"],
 
     futureScope: [
       "Enterprise integrations",
@@ -295,17 +269,9 @@ export const projects = [
 
     technologies: ["HTML", "CSS", "JavaScript"],
 
-    features: [
-      "Project Showcase",
-      "Responsive Design",
-      "Animated UI",
-    ],
+    features: ["Project Showcase", "Responsive Design", "Animated UI"],
 
-    futureScope: [
-      "Blog section",
-      "Dark mode",
-      "CMS integration",
-    ],
+    futureScope: ["Blog section", "Dark mode", "CMS integration"],
 
     image: "/work-photo/FULL STACK WEB DEVELOPER (4).png",
     github: "https://github.com/Ankitrathore2006/newport.github.io/",
@@ -361,7 +327,13 @@ export const projects = [
       "Scalable frontend architecture",
     ],
 
-    technologies: ["React", "TypeScript", "Vite", "TailwindCSS", "Framer Motion"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "TailwindCSS",
+      "Framer Motion",
+    ],
 
     features: [
       "Inventory Management",
@@ -397,17 +369,9 @@ export const projects = [
 
     technologies: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
 
-    features: [
-      "Real-time Messaging",
-      "Online Status",
-      "User Authentication",
-    ],
+    features: ["Real-time Messaging", "Online Status", "User Authentication"],
 
-    futureScope: [
-      "Group chats",
-      "Media sharing",
-      "Video calling",
-    ],
+    futureScope: ["Group chats", "Media sharing", "Video calling"],
 
     image: "/images/chat-app.png",
     github: "https://github.com/Ankitrathore2006/chat-app",
@@ -431,11 +395,7 @@ export const projects = [
 
     technologies: ["React", "Node.js", "MongoDB", "Redux", "Material UI"],
 
-    features: [
-      "Flight Search",
-      "Price Filtering",
-      "Booking Management",
-    ],
+    features: ["Flight Search", "Price Filtering", "Booking Management"],
 
     futureScope: [
       "Airline API integration",
@@ -447,6 +407,56 @@ export const projects = [
     github: "https://github.com/Ankitrathore2006/",
     liveLink: "https://flight-comparign-frontend.vercel.app/",
   },
-
-
+  {
+    slug: "financial-forecast-explanation",
+    title: "Explainable AI: Financial Forecast & Intelligence Engine",
+    shortDescription:
+      "An institutional-grade financial intelligence platform that combines machine learning, market data, news sentiment, and LLMs to forecast stock trends and explain predictions.",
+    introduction:
+      "This platform provides data-driven stock forecasts with transparent, AI-generated explanations. It combines Random Forest machine learning, technical indicators, financial fundamentals, news sentiment, and Gemini/OpenRouter LLMs to transform complex market data into clear and actionable intelligence.",
+    keyInsights: [
+      "Explainable AI-powered stock forecasting",
+      "Random Forest trend prediction with backtesting",
+      "LLM-generated financial explanations",
+      "Natural-language stock and timeframe detection",
+      "Multi-API redundancy with graceful fallbacks",
+      "Premium glassmorphic financial dashboard",
+    ],
+    technologies: [
+      "React",
+      "Vite",
+      "Python",
+      "FastAPI",
+      "Random Forest",
+      "Google Gemini",
+      "OpenRouter",
+      "Yahoo Finance",
+      "NewsData.io",
+      "Chart.js",
+    ],
+    features: [
+      "Stock Data & Fundamental Analysis",
+      "Technical Indicators: RSI, MACD & Moving Averages",
+      "Random Forest Trend Prediction",
+      "AI-Generated Financial Explanations",
+      "Natural-Language Financial Queries",
+      "News Sentiment Analysis",
+      "Interactive Charts & Visualizations",
+      "Persistent Watchlist & Search History",
+      "Walk-Forward Backtesting",
+      "Graceful AI API Fallbacks",
+    ],
+    futureScope: [
+      "Real-time market alerts and notifications",
+      "Portfolio-level forecasting and risk analysis",
+      "Additional financial data providers",
+      "Advanced deep-learning forecasting models",
+      "Personalized investment dashboards",
+      "Mobile application",
+    ],
+    image: "/work-photo/finance.png",
+    github:
+      "https://github.com/Ankitrathore2006/Financial-Forecast-Explanation-Tool",
+    liveLink: "",
+  },
 ];

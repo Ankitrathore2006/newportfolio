@@ -14,11 +14,11 @@ import toast, { Toaster } from "react-hot-toast";
 import ContactForm from "@/components/ui/ContactForm";
 
 
-
 function Page() {
 
 
   return (
+      <>
     <section id="projects" className="body-case-studies h-screen">
       {/* Navbar Section */}
       <header id="Header" className="navbar w-nav">
@@ -223,6 +223,7 @@ function Page() {
         </div>
       </footer>
     </section>
+    </>
   );
 }
 

@@ -1291,10 +1291,6 @@
     background-color: var(--background);
   }
 
-  .bg-black {
-    background-color: var(--color-black);
-  }
-
   .bg-foreground {
     background-color: var(--foreground);
   }

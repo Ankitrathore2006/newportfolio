@@ -11,6 +11,7 @@ import Contact from "@/components/ui/Contact";
 import AboutMe from "@/components/ui/AboutMe";
 import "./globals.css";
 import WorkContent from "@/components/ui/WorkContent";
+import AiInput from "@/components/AiInput";
 
 function useTiltToMouse() {
   useEffect(() => {
@@ -148,6 +149,7 @@ function Page() {
 
   return (
     <>
+     <AiInput />
       <section id="home" ref={sectionRef} className="">
        
         {/* Navigation */}

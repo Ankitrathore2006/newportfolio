@@ -164,9 +164,10 @@ const AiInput = () => {
     <div className="aiInput flex items-center">
       <motion.div layout>
         <motion.div
-          className={cn("relative flex items-end gap-2 overflow-hidden")}
+          className={cn("relative flex flex-col-reverse sm:flex-row items-start sm:items-end gap-2 overflow-hidden")}
           style={{
             borderRadius: 0,
+
           }}
           initial={{
             scale: 0,
@@ -225,7 +226,7 @@ const AiInput = () => {
                   scale: 0.8,
                   filter: "blur(5px)",
                 }}
-                className="flex w-[460px] flex-col gap-2 rounded-lg bg-[whitesmoke] p-2"
+                className="flex w-[86vw] sm:w-[460px] flex-col gap-2 rounded-lg bg-[whitesmoke] p-2"
               >
                 {/* Chat */}
                 <div className="ai-chat-window">
